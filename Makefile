@@ -1,5 +1,8 @@
+## run through roswell
+LISP=ros run --
+
 LISPFLAGS=--quit --non-interactive
 
 .PHONY: tests
 tests:
-	sbcl $(LISPFLAGS) --load tests-runner.lisp
+	$(LISP) $(LISPFLAGS) --load tests-runner.lisp
