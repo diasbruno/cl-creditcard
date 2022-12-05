@@ -1,15 +1,17 @@
+(let ((env (uiop:getenv "ENV")))
+  (when (string= env "development")
+    (push #P"../cl-sqlite/" ql:*local-project-directories*)))
+
 (push #P"./" ql:*local-project-directories*)
 
-(quicklisp:quickload :cl-creditcard-test)
+(ql:quickload :creditcard-tests)
 
 (setq fiveam:*on-error* :debug)
 
-(in-package #:cl-user)
-
 (setf *debugger-hook*
       (lambda (c h)
-	(declare (ignore c h))
-	(uiop:quit -1)))
+        (declare (ignore c h))
+        (uiop:quit -1)))
 
 (unless (fiveam:run-all-tests)
   (exit :code 1 :abort t))

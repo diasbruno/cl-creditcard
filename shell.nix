@@ -4,6 +4,8 @@ let
 in
 pkgs.mkShell {
   nativeBuildInputs = [
+    pkgs.pkg-config
+    pkgs.sqlite
     pkgs.roswell
     pkgs.sbcl
     lisps.quicklisp
