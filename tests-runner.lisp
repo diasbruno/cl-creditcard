@@ -1,6 +1,6 @@
-(push #P"./" ql:*local-project-directories*)
+(push *default-pathname-defaults* ql:*local-project-directories*)
 
-(quicklisp:quickload :cl-creditcard-test)
+(ql:quickload :creditcard.test)
 
 (setq fiveam:*on-error* :debug)
 
@@ -8,8 +8,8 @@
 
 (setf *debugger-hook*
       (lambda (c h)
-	(declare (ignore c h))
-	(uiop:quit -1)))
+        (declare (ignore c h))
+        (uiop:quit -1)))
 
 (unless (fiveam:run-all-tests)
   (exit :code 1 :abort t))
