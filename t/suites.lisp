@@ -1,7 +1,7 @@
-(defpackage #:creditcard-tests
+(defpackage #:creditcard.tests
   (:use #:cl #:fiveam))
 
-(in-package :creditcard-tests)
+(in-package :creditcard.tests)
 
 (5am:def-suite test-suite
   :description "Suite for tests.")
