@@ -1,6 +1,6 @@
 (push *default-pathname-defaults* ql:*local-project-directories*)
 
-(ql:quickload :creditcard.test)
+(ql:quickload :creditcard.tests)
 
 (setq fiveam:*on-error* :debug)
 

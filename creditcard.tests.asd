@@ -1,4 +1,4 @@
-(asdf:defsystem #:creditcard.test
+(asdf:defsystem #:creditcard.tests
   :description "package with automated testing for creditcard."
   :author "Bruno Dias"
   :license  "unlicense"
@@ -7,4 +7,5 @@
   :depends-on (#:fiveam
                #:creditcard)
   :components ((:module "t"
-                :components ((:file "suites")))))
+                :components ((:file "package")
+                             (:file "card")))))
